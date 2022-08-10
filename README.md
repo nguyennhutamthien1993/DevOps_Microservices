@@ -1,4 +1,4 @@
-<include a CircleCI status badge, here>
+[![CircleCI](https://dl.circleci.com/status-badge/img/gh/nguyennhutamthien1993/DevOps_Microservices/tree/main.svg?style=svg)](https://dl.circleci.com/status-badge/redirect/gh/nguyennhutamthien1993/DevOps_Microservices/tree/main)
 
 ## Project Overview
 
@@ -16,12 +16,6 @@ Your project goal is to operationalize this working, machine learning microservi
 * Configure Kubernetes and create a Kubernetes cluster
 * Deploy a container using Kubernetes and make a prediction
 * Upload a complete Github repo with CircleCI to indicate that your code has been tested
-
-You can find a detailed [project rubric, here](https://review.udacity.com/#!/rubrics/2576/view).
-
-**The final implementation of the project will showcase your abilities to operationalize production microservices.**
-
----
 
 ## Setup the Environment
 
@@ -48,3 +42,15 @@ source .devops/bin/activate
 * Setup and Configure Kubernetes locally
 * Create Flask app in Container
 * Run via kubectl
+
+### Structure
+1. The `.circleci` folder includes a `config.yml` file that check project code build status. It is indicated by a badge status is attached at Top of README.md
+2. The `output_txt_files` folder contains the log output from a prediction which is made
+3. The `app.py` file contains code of Flask app Make a prediction home
+4. The `Dockerfile` file contains steps to structure Docker image for app prediction a home
+5. The `make_prediction.sh` file contains query Docker hub or Kubernetes cluster with response of a prediction data
+6. The `Makefile` file contains steps to build virtual environment, install dependences, build software and lint app code
+7. The `requirements.txt` file contains dependences we need for our application
+8. The `run_docker.sh` file contains steps to build a docker image of our application
+9. The `run_kubernetes.sh` file contains step to run Docker Hub with kubernetes and forward container port in Kubernetes Cluster
+10. The `upload_docker.sh` file contains step to publish our docker image to Docker Hub
