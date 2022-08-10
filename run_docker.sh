@@ -4,7 +4,7 @@
 
 # Step 1:
 # Build image and add a descriptive tag
-docker build --tag=thiennnt/devops .
+docker build --tag=thiennnt/devops
 
 # Step 2: 
 # List docker images
